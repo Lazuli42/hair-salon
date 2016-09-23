@@ -80,6 +80,36 @@ DELETE FROM stylists;
 INSERT INTO stylists (name) VALUES ('Randy');
 UPDATE stylists SET name = 'Randal' WHERE id = 1;
 DELETE FROM stylists;
+<!-- ClientTest.php -->
+INSERT INTO stylists (name) VALUES ('Randy');
+INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
+SELECT * FROM clients;
+DELETE FROM clients;
+DELETE FROM stylists;
+INSERT INTO stylists (name) VALUES ('Randy');
+INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
+INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
+DELETE FROM clients;
+SELECT * FROM clients;
+DELETE FROM clients;
+DELETE FROM stylists;
+INSERT INTO stylists (name) VALUES ('Randy');
+INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
+INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
+DELETE FROM clients;
+DELETE FROM stylists;
+INSERT INTO stylists (name) VALUES ('Randy');
+INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
+INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
+DELETE FROM clients WHERE id = 1;
+SELECT * FROM clients;
+DELETE FROM clients;
+DELETE FROM stylists;
+INSERT INTO stylists (name) VALUES ('Randy');
+INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
+UPDATE stylists SET name = 'Lazuli' WHERE id = 1;
+DELETE FROM clients;
+DELETE FROM stylists;
 ~~~
 
 License
