@@ -44,75 +44,17 @@ PHP, Silex, Twig, PHPUnit, Bootstrap, Mysql, MAMP
 
 ~~~
 CREATE DATABASE hair_salon;
+USE hair_salon;
 CREATE TABLE stylists (id serial PRIMARY KEY, name varchar (255));
 CREATE TABLE clients (id serial PRIMARY KEY, name varchar (255), stylist_id int);
 CREATE DATABASE hair_salon_test;
+USE hair_salon_test;
 CREATE TABLE stylists (id serial PRIMARY KEY, name varchar (255));
 CREATE TABLE clients (id serial PRIMARY KEY, name varchar (255), stylist_id int);
-<!--StylistTest.php-->
-INSERT INTO stylists (name) VALUES ('Randy');
-SELECT * FROM stylists;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO stylists (name) VALUES ('Phoebe');
-SELECT * FROM stylists;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO stylists (name) VALUES ('Phoebe');
-DELETE FROM stylists;
-SELECT * FROM stylists;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO stylists (name) VALUES ('Phoebe');
-SELECT * FROM stylists;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
-SELECT * FROM clients WHERE stylist_id = 1;
-DELETE FROM stylists;
-DELETE FROM clients;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO stylists (name) VALUES ('Phoebe');
-DELETE FROM stylists WHERE id = 1;
-SELECT * FROM stylists;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-UPDATE stylists SET name = 'Randal' WHERE id = 1;
-DELETE FROM stylists;
-<!-- ClientTest.php -->
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-SELECT * FROM clients;
-DELETE FROM clients;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
-DELETE FROM clients;
-SELECT * FROM clients;
-DELETE FROM clients;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
-DELETE FROM clients;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-INSERT INTO clients (name, stylist_id) VALUES ('Alexi', 1);
-DELETE FROM clients WHERE id = 1;
-SELECT * FROM clients;
-DELETE FROM clients;
-DELETE FROM stylists;
-INSERT INTO stylists (name) VALUES ('Randy');
-INSERT INTO clients (name, stylist_id) VALUES ('Zachary', 1);
-UPDATE clients SET name = 'Lazuli' WHERE id = 1;
-DELETE FROM clients;
-DELETE FROM stylists;
 ~~~
 
-License
+####License
+
 *Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
